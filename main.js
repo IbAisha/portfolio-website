@@ -1,7 +1,7 @@
 
 window.addEventListener('mousemove', function(event) {
 
-    if(this.window.innerWidth > 1000) {
+    if(this.window.innerWidth > 1000 && !body.classList.contains('is-night')) {
         // Récupérer les coordonnées de la souris
     const x = event.clientX;
     const y = event.clientY;
@@ -23,4 +23,9 @@ const body = document.querySelector(".body");
 
 nightModeIcon.addEventListener('click', () => {
     body.classList.toggle("is-night");
+    localStorage.setItem('nightMode', body.classList.contains('is-night'));
+
+    if(localStorage.getItem('nightMode') === 'true') {
+        body.classList.add('is-night');
+    }
 });

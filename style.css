@@ -1,36 +1,61 @@
 body {
-    margin : 5px;
+    margin : 0;
     background-color: #ffeac5f3;
-    margin: 10px;
     color: #613333;
     transition: background-color 0.5s ease, 0.5s ease;
 }
 * {
-    font-family: 'Inter';
+    font-family: "Parkinsans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 nav {
     display: flex;
-    justify-content: right;
-    padding-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    background-color: #613333;
+
+}
+nav>ul {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color: white;
+}
+
+nav>ul>a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.title, .social-icons, .main-content {
+    margin : 10px;
+
 }
 
 #night-mode-icon {
+    display: flex;
+    justify-content: right;
     cursor: pointer;
 }
 
 .title {
     display: flex;
     flex-direction: column;
-    margin: 0 0 20px;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 600;
 }
 h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 h1, h2 {
@@ -41,8 +66,7 @@ h3 {
     text-decoration:#613333 underline;
     text-transform: uppercase;
 }
-#social-icons {
-    margin: 0;
+.social-icons {
     display: flex;
     flex-direction: row;
     fill :#613333
@@ -58,12 +82,19 @@ li {
     list-style: none;
 }
 section {
-    margin: 80px 0;
+    width: 80%;
+    margin: 10px 0;
     padding-right:20px;
 }
-.projet {
+
+.projet { /* div de chaque projet indivuel */
     margin-top: 50px;
 }
+
+.actu-aside {
+    display: none
+}
+
 
 /******* NIGHT MODE******/
 
@@ -79,3 +110,31 @@ body.is-night #social-icons {
 body.is-night h3 {
     text-decoration: #ffeac5f3 underline;
 }
+
+/************ VERSION PC *****************/
+
+@media only screen and (min-width: 992px) { 
+    .main-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .main-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .actu-aside{
+        display: block;
+        align-self: start;
+        position: sticky;
+        top: 10px;
+    }
+
+    .actu-aside h2 {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+ }
