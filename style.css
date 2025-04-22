@@ -12,31 +12,35 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 60px;
     background-color: #613333;
-
 }
 nav>ul {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    color: white;
-}
-
-nav>ul>a {
-    text-decoration: none;
-    color: white;
+    display: none;
 }
 
 
-.title, .social-icons, .main-content {
-    margin : 10px;
+#menu-burger {
+    cursor: pointer;
+}
 
+.icon-menu {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+}
+
+.active {
+    display: block;
+}
+
+.m10 {
+    margin: 10px;
 }
 
 #night-mode-icon {
@@ -50,12 +54,13 @@ nav>ul>a {
     flex-direction: column;
 }
 
+
 h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 600;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 h1, h2 {
@@ -95,6 +100,13 @@ section {
     display: none
 }
 
+.active-menu {
+    width : 300px;
+    height: 900px;
+    background-color: #ffeac5f3;
+
+
+}
 
 /******* NIGHT MODE******/
 
@@ -136,5 +148,28 @@ body.is-night h3 {
     .actu-aside h2 {
         text-transform: uppercase;
         font-size: 1.5rem;
+    }
+
+    nav>ul {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        color: white;
+    }
+    
+    nav>ul>a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .active-menu {
+        width : 500px;
+        height: 100%;
+        background-color: #ffeac5f3;
+    }
+
+    #menu-burger {
+        display: none;
     }
  }

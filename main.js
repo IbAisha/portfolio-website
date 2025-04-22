@@ -1,3 +1,4 @@
+const body = document.querySelector(".body");
 
 window.addEventListener('mousemove', function(event) {
 
@@ -18,8 +19,9 @@ window.addEventListener('mousemove', function(event) {
     
 });
 
+function nightMode() {
+    
 const nightModeIcon = document.getElementById('night-mode-icon');
-const body = document.querySelector(".body");
 
 nightModeIcon.addEventListener('click', () => {
     body.classList.toggle("is-night");
@@ -29,3 +31,20 @@ nightModeIcon.addEventListener('click', () => {
         body.classList.add('is-night');
     }
 });
+
+}
+nightMode();
+
+
+
+function openMenu() {
+    const iconMenu = document.getElementById("menu-burger");
+    iconMenu.addEventListener('click', () => {
+    iconMenu.classList.toggle("active-menu")
+})
+
+console.log("open")
+}
+
+openMenu();
+
