@@ -43,6 +43,10 @@ nav>ul {
     margin: 10px;
 }
 
+.ps20 {
+    padding: 0 20px 0;
+}
+
 #night-mode-icon {
     display: flex;
     justify-content: right;
@@ -71,7 +75,7 @@ h3 {
     text-decoration:#613333 underline;
     text-transform: uppercase;
 }
-.social-icons {
+#social-icons {
     display: flex;
     flex-direction: row;
 }
@@ -86,17 +90,12 @@ ul {
 li {
     list-style: none;
 }
-section {
-    width: 80%;
-    margin: 10px 0;
-    padding-right:20px;
-}
 
 .projet { /* div de chaque projet indivuel */
     margin-top: 50px;
 }
 
-.actu-aside {
+#actu-aside {
     display: none
 }
 
@@ -126,28 +125,30 @@ body.is-night h3 {
 /************ VERSION PC *****************/
 
 @media only screen and (min-width: 992px) { 
-    .main-content {
+    .content {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 2rem;
     }
 
-    .main-sections {
+    .sections {
         display: flex;
         flex-direction: column;
         gap: 50px;
     }
 
-    .actu-aside{
+    #actu-aside{
+        padding: 20px;
         display: block;
         align-self: start;
         position: sticky;
         top: 10px;
+        box-shadow: inset 2px 0 5px -5px #693c1d;
     }
 
-    .actu-aside h2 {
+    #actu-aside>h2 {
         text-transform: uppercase;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     nav>ul {
