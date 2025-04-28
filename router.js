@@ -3,13 +3,13 @@ const route = (event) => {
     event.preventDefault();
     window.history.pushState({}, "", event.target.href);
 
-    gestionLocation();
+    gestionLocation(); // responsable de la redirection
 };
 
     const routes = {
-        "/" : "/pges.index.html",
+        "/" : "/index.html",
         "/projets" : "/projets.html",
-        "/actu.html" : "/actu.html"
+        "/actu" : "/actu.html"
     };
 
     const gestionLocation = async() => {
