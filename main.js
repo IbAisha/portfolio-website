@@ -48,3 +48,10 @@ console.log("open")
 
 openMenu();
 
+function actu() {
+    
+    const actuDiv = document.getElementById("actuDOM");
+    
+    const 
+}
+
