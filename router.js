@@ -1,23 +1,38 @@
 const route = (event) => {
     event = event || window.event;
     event.preventDefault();
-    window.history.pushState({}, "", event.target.href);
+    window.history.pushState({}, "", event.target.getAttribute('href'));
 
     gestionLocation(); // responsable de la redirection
 };
 
     const routes = {
-        "/" : "/index.html",
-        "/projets" : "/projets.html",
-        "/actu" : "/actu.html"
+        "" : "/pages/home.html",
+        "#/projets" : "pages/projets.html",
+        "#/actu" : "pages/actu.html",
+        "#/404" : "pages.404.html"
     };
 
     const gestionLocation = async() => {
-        const path = window.location.pathname;
-        const route = routes[path] || routes[404];
-        const html = await fetch(route).then((data) => data.text());
-        document.getElementById("app").innerHTML = html;
-    }
+        const hash = window.location.hash || "" ;
+        const route = routes[hash] || routes[404] || routes[""];
+        
+
+        try {
+            const html = await fetch(route).then((data) => data.text());
+            document.getElementById("app").innerHTML = html ;
+
+            } catch (error) {
+                console.error("Erreur", error);
+
+                if ( hash !== "") {
+                    window.location.hash = "";
+            }
+        }
+        
+    };                          
+
 
     window.onpopstate = gestionLocation();
     window.route = route;
+    gestionLocation();
