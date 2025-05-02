@@ -20,23 +20,15 @@
 <body class="body">
     
 <nav> 
-    <div id="menu-burger">
-        <div class="icon-menu"></div>
-        <div class="icon-menu"></div>
-        <div class="icon-menu"></div>
-    </div>
     <ul class="ps20" id="links">
-        <li><a  href="#/home" onclick=route(event)> Accueil </a></li>
-        <li><a href="#/projets" onclick="route(event)"> Projet </a></li>
-        <li><a href="#/actu" onclick="route(event)"> Mon actu </a></li>
+        <li><a  href="#/home" onclick=route()> Accueil </a></li>
+        <li><a href="#/projets" onclick="route()"> Projet </a></li>
+        <li><a href="#/actu" onclick="route()"> Mon actu </a></li>
     </ul>
     <i id="night-mode-icon" class="fa-regular fa-moon fa-2x" style="color: #eee2d6;"></i>
 </nav>
-
-
+    
         <div id="app"></div>
-
-
 
     <script src="main.js"></script>
     <script src="router.js"></script>

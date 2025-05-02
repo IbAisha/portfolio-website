@@ -17,18 +17,30 @@ nav {
     justify-content: space-between;
     width: 100%;
     height: 60px;
-    background-color: #613333;
-}
-nav>ul {
-    display: none;
+    background-color: #613333e3;
 }
 
+nav>ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color: white;
+}
+
+nav>ul>li {
+    padding: 10px;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
 
 #menu-burger {
     cursor: pointer;
 }
 
-.icon-menu {
+.icon-menu { 
     width: 30px;
     height: 2px;
     background-color: white;
@@ -60,39 +72,48 @@ nav>ul {
 
 
 h1 {
-    font-size: 2em;
+    font-size: 2.3em;
     font-weight: 600;
 }
 h2 {
-    font-size: 1.2rem;
-}
-
-h1, h2 {
-    margin: 5px 0;
+    font-size: 1.3rem;
 }
 
 h3 {
     text-decoration:#613333 underline;
     text-transform: uppercase;
 }
-#social-icons {
+#socials {
     display: flex;
     flex-direction: row;
+    text-decoration: none;
 }
 
-svg {
+#socials>li {
     padding: 0 10px 0 0;
-    fill: #613333;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px 10px;
+    border: brown 1px solid;
+    background-color:#613333;
+    
 }
+#socials>li>a {
+    text-decoration: none;
+    color: #ffeac5f3;
+    font-weight: 600;
+}
+
+#socials>li>a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
 ul {
     padding-left: 0;
 }
 li {
     list-style: none;
-}
-
-.projet { /* div de chaque projet indivuel */
-    margin-top: 50px;
 }
 
 #actu-aside {
@@ -103,8 +124,6 @@ li {
     width : 300px;
     height: 900px;
     background-color: #ffeac5f3;
-
-
 }
 
 /******* NIGHT MODE******/
@@ -122,6 +141,51 @@ body.is-night h3 {
     text-decoration: #ffeac5f3 underline;
 }
 
+#main-content-actu {
+    width: 50%;
+    border-radius: 15px;
+    padding: 10px 30px;
+    box-shadow: 0.1px 0.1px 5px rgb(100, 56, 35);
+}
+
+.timeline {
+    height: 200px;
+    width: 1px;
+    margin : 15px;
+    padding: 1px;
+    background-color: brown;
+    border: brown 1px solid;
+    
+}
+
+#point {
+    height: 10px;
+    width: 10px;
+    background-color: brown;
+    border: brown 1px solid;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+
+.projet {
+    padding: 10px;
+}
+.projet-content {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.projet:hover {
+    cursor: pointer;
+    margin: 0;
+    padding : 10px;
+    border-radius: 5px;
+    background-color: #fff4e3f3;
+    transition:all 1s ;
+}
+
 /************ VERSION PC *****************/
 
 @media only screen and (min-width: 992px) { 
@@ -131,37 +195,24 @@ body.is-night h3 {
         gap: 2rem;
     }
 
-    .sections {
+    .sections-container {
         display: flex;
         flex-direction: column;
         gap: 50px;
     }
 
     #actu-aside{
-        padding: 20px;
+        padding: 0 20px;
         display: block;
         align-self: start;
         position: sticky;
-        top: 10px;
+        top: 5px;
         box-shadow: inset 2px 0 5px -5px #693c1d;
     }
 
     #actu-aside>h2 {
         text-transform: uppercase;
         font-size: 2rem;
-    }
-
-    nav>ul {
-        width: 30%;
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        color: white;
-    }
-    
-    nav>ul>li>a {
-        text-decoration: none;
-        color: white;
     }
 
     .active-menu {

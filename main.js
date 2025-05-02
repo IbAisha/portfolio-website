@@ -12,7 +12,7 @@ window.addEventListener('mousemove', function(event) {
     const yPercent = (y / window.innerHeight) * 100;
 
     // Appliquer le dégradé en fonction de la position de la souris
-    document.body.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, #fff8e1,#ffeac5f3)`;
+    document.body.style.background = `radial-gradient(circle 350px at ${xPercent}% ${yPercent}%, #ffeac5a3,#ffeac5f3)`;
     } else {
     document.body.style.background = `#ffeac5f3`
     }
@@ -45,12 +45,9 @@ function openMenu() {
 
 console.log("open")
 }
-
 openMenu();
 
-function actu() {
-    
-    const actuDiv = document.getElementById("actuDOM");
+function actuDOM() {
+    const actu = document.getElementById('actu-ul');
 
 }
-
