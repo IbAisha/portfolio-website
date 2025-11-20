@@ -11,13 +11,13 @@ window.addEventListener('mousemove', function(event) {
     const xPercent = (x / window.innerWidth) * 100;
     const yPercent = (y / window.innerHeight) * 100;
 
-    // Appliquer le dégradé en fonction de la position de la souris
-    document.body.style.background = `radial-gradient(circle 350px at ${xPercent}% ${yPercent}%, #ffeac5a3,#ffeac5f3)`;
-    } else {
-    document.body.style.background = `#ffeac5f3`
-    }
+    // // Appliquer le dégradé en fonction de la position de la souris
+    // document.body.style.background = `radial-gradient(circle 350px at ${xPercent}% ${yPercent}%, #ffeac5a3,#ffeac5f3)`;
+    // } else {
+    // document.body.style.background = `#ffeac5f3`
+    // }
     
-});
+    }});
 
 function nightMode() {
     
@@ -37,15 +37,13 @@ nightMode();
 
 
 
-function openMenu() {
-    const iconMenu = document.getElementById("menu-burger");
-    iconMenu.addEventListener('click', () => {
-    iconMenu.classList.toggle("active-menu")
-})
-
-console.log("open")
-}
-openMenu();
+// function openMenu() {
+//     const iconMenu = document.getElementById("menu-burger");
+//     iconMenu.addEventListener('click', () => {
+//     iconMenu.classList.toggle("active-menu")
+// })
+// }
+// openMenu();
 
 function actuDOM() {
     const actu = document.getElementById('actu-ul');
